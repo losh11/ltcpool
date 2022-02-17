@@ -3,8 +3,6 @@ var path = require('path');
 var os = require('os');
 var cluster = require('cluster');
 
-var async = require('async');
-
 var PoolLogger = require('./libs/logUtil.js');
 var CliListener = require('./libs/cliListener.js');
 var PoolWorker = require('./libs/poolWorker.js');
