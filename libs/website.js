@@ -31,17 +31,7 @@ module.exports = function(logger) {
 
 	var pageFiles = {
 		'index.html': 'index',
-		'home.html': '',
-		'getting-started.html': 'getting-started',
-		'graphs.html': 'graphs',
-		'statistics.html': 'statistics',
-		'workers.html': 'workers',
-		'api.html': 'api',
-		'admin.html': 'admin',
-		'mining-key.html': 'mining-key',
-		'miner-statistics.html': 'miner-statistics',
-		'payments.html': 'payments',
-		'chat.html': 'chat'
+		'home.html': ''
 	};
 
 	var pageTemplates = {};
@@ -406,6 +396,7 @@ module.exports = function(logger) {
 	app.use( '/', express.static( 'website/static' ) );
 	app.use( compress() );
 	app.use( '/static', express.static( 'website/static' ) );
+	app.use( '/dist', express.static( 'website/dist' ) );
 
 	app.use( function(err, req, res, next) {
 		console.error( err.stack );
